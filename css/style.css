@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,9 +13,10 @@ body{
     background-size: cover;
     background-position: center;
 }
-.content{
+
+.content {
     background-color: blue;
-    width: 40%;
+    width: 90%; /* Adjusted width for mobile devices */
     margin: 0 auto;
     text-align: center;
     border-radius: 10px;
@@ -23,12 +25,14 @@ body{
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(10px);
 }
-h1{
+
+h1 {
     color: white;
     position: relative;
     padding-bottom: 1rem;
 }
-h1::after{
+
+h1::after {
     content: "";
     width: 30px;
     height: 4px;
@@ -38,10 +42,10 @@ h1::after{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    
 }
-button{
-    width: 30%;
+
+button {
+    width: 80%; /* Adjusted width for mobile devices */
     height: 45px;
     border: none;
     outline: none;
@@ -51,12 +55,14 @@ button{
     transition: background-color 0.3s ease;
     margin: 1rem 0;
 }
-button:hover{
+
+button:hover {
     background-color: transparent;
     color: white;
     border: 2px solid white;
 }
-input{
+
+input {
     display: block;
     width: 90%;
     margin: 0 auto;
@@ -69,20 +75,37 @@ input{
     color: #fff;
     padding: 20px 40px;
 }
-input::placeholder{
+
+input::placeholder {
     color: #fff;
 }
 
-p{
+p {
     color: white;
     padding-bottom: 1rem;
 }
-p a{
+
+p a {
     text-decoration: none;
     color: white;
     font-weight: 700;
-
 }
-p a:hover{
+
+p a:hover {
     text-decoration: underline;
+}
+
+/* Media query for smaller screens (adjust as needed) */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
 }
